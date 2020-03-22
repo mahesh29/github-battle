@@ -55,6 +55,12 @@ li {
     margin: 20px;
 }
 
+.header-sm {
+    font-size: 28px;
+    font-weight: 300;
+    margin: 10px;
+}
+
 .avatar {
     width: 150px;
     height: 150px;
@@ -68,7 +74,7 @@ li {
 }
 
 .link {
-    color: rgb (187, 46, 31);
+    color: rgb(187, 46, 31);
     text-decoration: none;
     font-weight: bold;
 }
@@ -85,16 +91,16 @@ li {
 }
 
 .card-list svg {
-    margin: 10px;
+    margin-right: 10px;
 }
 
-.card-list area {
+.card-list a {
     font-weight: 500;
     color: inherit;
 }
 
 .bg-light {
-    background: rgb(0, 0, 0, 0.08);
+    background: rgba(0, 0, 0, 0.08);
     border-radius: 3px;
 }
 
@@ -110,4 +116,28 @@ li {
 
 .repo img {
     margin-bottom: 8px;
+}
+
+.instructions-container {
+    margin: 100px 0;
+}
+
+.container-sm {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.battle-instructions {
+    padding: 0;
+    font-size: 25px;
+}
+
+.battle-instructions li {
+    flex: 1;
+    min-width: 300px;
+}
+
+.battle-instructions svg {
+    padding: 40px;
+    border-radius: 3px;
 }
