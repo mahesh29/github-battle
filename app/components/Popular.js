@@ -3,6 +3,8 @@ import PropTypes from 'prop-types'
 import { fetchPopularRepos } from '../utils/api'
 import { FaUser, FaStar, FaCodeBranch, FaExclamationTriangle } from 'react-icons/fa'
 import Card from './Card'
+import Loading from './Loading'
+import Tooltip from './Tooltip'
 
 function LanguagesNav ({selected, onUpdateLanguage}) {
     const languages = ['All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python']
@@ -43,10 +45,12 @@ function ReposGrid({ repos }) {
                         name={login}>
                             <ul className='card-list'>
                                 <li>
-                                    <FaUser color='rgb(255, 191, 116)' size={22} />
-                                    <a href={`https://github.com/${login}`}>
-                                        {login}
-                                    </a>
+                                    <Tooltip text="Github Username">
+                                        <FaUser color='rgb(255, 191, 116)' size={22} />
+                                        <a href={`https://github.com/${login}`}>
+                                            {login}
+                                        </a>
+                                    </Tooltip>
                                 </li>
                                 <li>
                                     <FaStar color='rgb(25, 215, 0)' size={22} />
@@ -134,7 +138,7 @@ export default class Popular extends React.Component {
                     onUpdateLanguage={this.updateLanguage}
                 />
 
-                {this.isLoading() && <p>Loading</p>}
+                {this.isLoading() && <Loading text='Fetching Repos'/>}
 
                 {error && <p className='center-text error'>{error}</p>}
 
