@@ -2,4 +2,4 @@
 
 Compare two GitHub accounts
 
-[Project Link](gitflexing.netlify.app)
+[Project Link](https://gitflexing.netlify.app/)
